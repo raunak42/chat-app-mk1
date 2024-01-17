@@ -5,8 +5,9 @@ const resolvers = {
         }
     },
     Mutation: {
-        createUsername: () => {
-
+        createUsername: (_: any, args: { username: string }, context: any) => {
+            const { username } = args;
+            console.log("Hey, at the API", username);
         }
     },
 }
